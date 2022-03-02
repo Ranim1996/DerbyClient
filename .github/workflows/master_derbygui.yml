@@ -50,6 +50,5 @@ jobs:
         id: deploy-to-webapp
         with:
           app-name: 'DerbyGUI'
-          slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_6A43223360A3424A80FA99DAF650777F }}
-          package: .
+          package: ./dist/DerbyClient
