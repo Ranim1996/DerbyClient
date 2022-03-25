@@ -1,0 +1,38 @@
+<div class="container">
+  <div>
+    <div class="card">
+      <div class="card-body">
+        <!-- <div *ngIf="isLoginError" class="red-text center error-message">
+          <i class="material-icons">error</i> Incorrect username or password
+        </div> -->
+        <form> <!-- #loginForm="ngForm" (ngSubmit)="OnSubmit(email.value,password.value)"-->
+          <div class="imgcontainer">
+            <img src="assets/logo.png" class="logo">
+          </div>
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-user"></i></span>
+            </div>
+            <input type="text" #email ngModel name="email" placeholder="email" required>
+            
+          </div>
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-key"></i></span>
+            </div>
+            <input type="password" #password ngModel name="password" placeholder="password" required>
+          </div>
+          
+          <br> 
+
+          <div class="form-group">
+            <button type="submit">Sign In</button> <!--  [disabled]="!loginForm.valid" class="float-right" type="submit"-->
+          </div>
+          <div>
+            Don't have an account?<a href="#">Sign Up</a> <!--[routerLink]="['/booky', 'register']"-->
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
