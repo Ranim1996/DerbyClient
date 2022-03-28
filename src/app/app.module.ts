@@ -5,19 +5,21 @@ import { AppComponent } from './app.component';
 import { UsersComponent } from './users/users.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
+import { HeaderComponent } from './header/header.component';
 
 import { HttpClientModule } from '@angular/common/http';
 
 import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import {MatButtonModule} from '@angular/material/button';
-import {MatCardModule} from '@angular/material/card';
-import {MatIconModule} from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import {MatDividerModule} from '@angular/material/divider';
-import { AppRoutingModule } from './app-routing.module';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 
 @NgModule({
@@ -26,6 +28,7 @@ import { AppRoutingModule } from './app-routing.module';
     UsersComponent,
     LoginComponent,
     SignupComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,8 @@ import { AppRoutingModule } from './app-routing.module';
     MatIconModule,
     MatFormFieldModule,
     MatDividerModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
