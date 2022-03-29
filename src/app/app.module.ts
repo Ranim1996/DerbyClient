@@ -20,6 +20,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import {MatListModule} from '@angular/material/list';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatFormFieldModule,
     MatDividerModule,
     AppRoutingModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

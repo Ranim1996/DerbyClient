@@ -1,3 +1,4 @@
+import { UsersComponent } from './users/users.component';
 import { LoginComponent } from './login/login.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -12,6 +13,10 @@ const routes: Routes = [
   { 
     path: 'Derby/signup', 
     component: SignupComponent 
+  },
+  { 
+    path: 'Derby/users', 
+    component: UsersComponent 
   }
 ];
 

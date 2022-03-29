@@ -1,0 +1,23 @@
+.example-card {
+    max-width: 600px;
+    margin-top: 75px;
+    background: rgb(228, 231, 236);
+}
+
+.mat-card-content{
+    margin-left: 20px;
+}
+
+.detail{
+    margin-left: 400px;
+}
+
+h5{
+    font-weight: bold;
+    font-size: medium;
+} 
+
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
+    width: 100%;
+    text-align: -webkit-center;
+}
