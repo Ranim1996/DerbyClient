@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { UsersComponent } from './users/users.component';
@@ -21,6 +22,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import {MatListModule} from '@angular/material/list';
+import {MatDialogModule} from '@angular/material/dialog';
+import { DeleteuserComponent } from './users/deleteuser/deleteuser.component';
+import { UpdateuserComponent } from './users/updateuser/updateuser.component';
 
 
 @NgModule({
@@ -30,12 +34,17 @@ import {MatListModule} from '@angular/material/list';
     LoginComponent,
     SignupComponent,
     HeaderComponent,
+    DeleteuserComponent,
+    UpdateuserComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     RouterModule,
     BrowserAnimationsModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatIconModule,
     MatButtonModule,
     MatCardModule,
     MatIconModule,
@@ -43,7 +52,8 @@ import {MatListModule} from '@angular/material/list';
     MatDividerModule,
     AppRoutingModule,
     MatToolbarModule,
-    MatListModule
+    MatListModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
