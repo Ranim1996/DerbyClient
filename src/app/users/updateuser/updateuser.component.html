@@ -1,0 +1,48 @@
+<mat-card class="example-card">
+
+    <mat-card-content class="popup"> 
+
+        <form class="text-center border-silver" (ngSubmit)="updateUser()" #UserForm="ngForm">
+            
+        <div class="col-md-12"><label class="labels">First Name:</label>
+            <br>
+          <mat-form-field class="input-full-width">
+                <input type="text" class="form-control" id="firstName"
+                required 
+                [(ngModel)]="this.data.user.firstName" name="firstName"
+                #firstName="ngModel">
+          </mat-form-field>
+        </div>
+              <br>
+
+        <div class="col-md-12"><label class="labels">Last Name:</label>
+            <br>
+          <mat-form-field class="input-full-width">
+                    <input type="text" class="form-control" id="lastName"
+                    required
+                    [(ngModel)]="this.data.user.lastName" name="lastName"
+                    #lastName="ngModel">          
+          </mat-form-field>
+        </div>
+              <br>
+          
+        <div class="col-md-12"><label class="labels">Email:</label>
+            <br>
+            <mat-form-field class="input-full-width">
+                    <input type="text" class="form-control" id="emailAddress"
+                    required
+                    [(ngModel)]="this.data.user.emailAddress" name="emailAddress"
+                    #emailAddress="ngModel">          
+            </mat-form-field>
+        </div>
+            <br>
+    
+        <button class="btn" type="submit" id="submitButton" ria-label="">Save</button>    
+            <br>
+  
+        </form>
+      
+    </mat-card-content>
+    
+</mat-card>
+  
