@@ -2,10 +2,10 @@
   <div>
     <div class="card">
       <div class="card-body">
-        <!-- <div *ngIf="isLoginError" class="red-text center error-message">
+        <div *ngIf="isLoginError" class="red-text center error-message">
           <i class="material-icons">error</i> Incorrect username or password
-        </div> -->
-        <form> <!-- #loginForm="ngForm" (ngSubmit)="OnSubmit(email.value,password.value)"-->
+        </div>
+        <form #loginForm="ngForm" (ngSubmit)="OnSubmit(email.value,password.value)">
           <div class="imgcontainer">
             <img src="assets/logo.png" class="logo">
           </div>
@@ -26,7 +26,7 @@
           <br> 
 
           <div class="form-group">
-            <button type="submit">Sign In</button> <!--  [disabled]="!loginForm.valid" class="float-right" type="submit"-->
+            <button type="submit" [disabled]="!loginForm.valid" class="float-right" type="submit">Sign In</button>
           </div>
           <br>
           <div>

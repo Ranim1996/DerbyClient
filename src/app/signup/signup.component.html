@@ -2,32 +2,26 @@
     <div>
       <div class="card">
         <div class="card-body">
-          <form> <!--#userData="ngForm" 
-            class="text-center" 
-            (ngSubmit)="onSubmitRegistration(userData.value)"--> 
+          <form #userData="ngForm" 
+          class="text-center" 
+          (ngSubmit)="onSubmitRegistration(userData.value)">
             <div class="imgcontainer">
               <img src="assets/logo.png" class="logo">
             </div>
 
-            <!-- <mat-form-field class="input-full-width"> -->
-                <!-- [(ngModel)]="userData.firstName" 
-                    name="firstName" 
-
-                #firstName="ngModel" 
-                -->
+            <mat-form-field class="input-full-width">
+                <!-- [(ngModel)]="userData.firstName" #firstName="ngModel"    -->
                 <input matInput 
                     required
-                    type="text" 
+                    type="text"
+                    
+                    name="firstName" 
+                    [(ngModel)]="userData.firstName" 
+                    #firstName="ngModel"
                     
                     placeholder="First Name" 
-                 
-                    
-                     ng-pattern-restrict /> <!--pattern="[a-zA-Z]+"-->
-                    <div class="alert alert-danger"> <!--*ngIf="firstName.invalid && (userData.submitted || firstName.touched)"-->
-                    <!-- <div *ngIf="firstName.errors.required"> First Name is required. </div>  -->
-                    <!-- <div *ngIf="firstName.errors.pattern"> Can only contain Alphabets</div> -->
-                    </div>
-            <!-- </mat-form-field> -->
+                />
+            </mat-form-field>
 
             <!-- <mat-form-field class="input-full-width"> -->
                 <!-- [(ngModel)]="userData.lastName" 
@@ -130,7 +124,7 @@
             </div>
             <br>
             <div>
-              Do you have already an account?<a href="#" [routerLink]="['/Derby', 'login']">Sign In</a>
+              Do you have already an account?<a href="#" [routerLink]="['/Derby']">Sign In</a>
             </div>
             <br>
           </form>
