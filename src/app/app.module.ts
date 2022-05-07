@@ -23,8 +23,14 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import {MatListModule} from '@angular/material/list';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatTabsModule} from '@angular/material/tabs';
+
 import { DeleteuserComponent } from './users/deleteuser/deleteuser.component';
 import { UpdateuserComponent } from './users/updateuser/updateuser.component';
+import { ActivityComponent } from './activity/activity.component';
+import { DeleterequestComponent } from './activity/deleterequest/deleterequest.component';
+import { UpdaterequestComponent } from './activity/updaterequest/updaterequest.component';
+import { AddrequestComponent } from './activity/addrequest/addrequest.component';
 
 
 @NgModule({
@@ -36,6 +42,10 @@ import { UpdateuserComponent } from './users/updateuser/updateuser.component';
     HeaderComponent,
     DeleteuserComponent,
     UpdateuserComponent,
+    ActivityComponent,
+    DeleterequestComponent,
+    UpdaterequestComponent,
+    AddrequestComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,7 +63,8 @@ import { UpdateuserComponent } from './users/updateuser/updateuser.component';
     AppRoutingModule,
     MatToolbarModule,
     MatListModule,
-    MatDialogModule
+    MatDialogModule,
+    MatTabsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

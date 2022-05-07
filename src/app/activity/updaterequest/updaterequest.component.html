@@ -1,0 +1,37 @@
+<mat-card class="example-card">
+
+    <mat-card-content class="popup"> 
+
+        <form class="text-center border-silver" (ngSubmit)="updateRequest()" #RequestForm="ngForm">
+            
+        <div class="col-md-12"><label class="labels">Title:</label>
+            <br>
+          <mat-form-field class="input-full-width">
+                <input type="text" class="form-control" id="title"
+                required 
+                [(ngModel)]="this.data.request.title" name="title"
+                #title="ngModel">
+          </mat-form-field>
+        </div>
+              <br>
+
+        <div class="col-md-12"><label class="labels">Description:</label>
+            <br>
+          <mat-form-field class="input-full-width">
+                    <input type="text" class="form-control" id="description"
+                    required
+                    [(ngModel)]="this.data.request.description" name="description"
+                    #lastName="ngModel">          
+          </mat-form-field>
+        </div>
+            <br>
+    
+        <button class="btn" type="submit" id="submitButton" ria-label="">Save</button>    
+            <br>
+  
+        </form>
+      
+    </mat-card-content>
+    
+</mat-card>
+  

@@ -1,3 +1,4 @@
+import { ActivityComponent } from './activity/activity.component';
 import { UsersComponent } from './users/users.component';
 import { LoginComponent } from './login/login.component';
 import { NgModule } from '@angular/core';
@@ -17,6 +18,10 @@ const routes: Routes = [
   { 
     path: 'Derby/users', 
     component: UsersComponent 
+  },
+  { 
+    path: 'Derby/activity', 
+    component: ActivityComponent 
   }
 ];
 

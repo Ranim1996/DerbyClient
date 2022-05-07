@@ -1,0 +1,59 @@
+<div class="container p-3 my-3 border">
+
+    <mat-card class="example-card">
+
+        <mat-tab-group>
+            <mat-tab label="Event"> Content 1 </mat-tab>
+
+
+        <mat-tab label="Request">
+
+            <tr *ngFor="let request of requests">
+
+                <button mat-mini-fab aria-label="Example icon button with a add icon" (click)="openDialogAdd(request)"> <mat-icon matTooltip="Add request"> Add </mat-icon> </button>
+
+                <mat-divider></mat-divider>
+                <br>
+
+                <mat-card-content> 
+    
+                <div class="content">
+                    Title:
+                    <h5>{{request.title}}</h5>
+                    <br>
+                    <h5>{{request.description}}</h5>
+                </div>
+    
+                </mat-card-content>
+    
+                <mat-card-actions>
+    
+                    <div class="actions">
+            
+                        <button mat-mini-fab aria-label="Example icon button with a delete icon" (click)="openDialogDelete(request)"> <mat-icon matTooltip="Delete request"> delete </mat-icon> </button>
+                
+                        <button mat-mini-fab aria-label="Example icon button with a edit icon" (click)="openDialogUpdate(request)"> <mat-icon matTooltip="Edit request"> edit </mat-icon> </button>
+                
+                    </div>
+    
+                </mat-card-actions>
+    
+                <mat-divider></mat-divider>
+                <br>
+            </tr>
+        </mat-tab>
+
+
+        </mat-tab-group>
+        
+    </mat-card>
+  
+</div>
+  
+  
+  
+  
+  
+    
+  
+  
