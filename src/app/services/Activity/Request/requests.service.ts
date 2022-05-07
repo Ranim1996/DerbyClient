@@ -37,7 +37,7 @@ export class RequestsService {
   }
 
   public addRequest(request: RequestModel) {
-    const url = 'https://localhost:44324/api/Request/addrequest';
+    const url = 'https://localhost:44324/api/Request/addrequest'; 
     return this.httpClient.put(url, request, this.httpOptions);
   }
 

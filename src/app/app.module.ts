@@ -31,6 +31,9 @@ import { ActivityComponent } from './activity/activity.component';
 import { DeleterequestComponent } from './activity/deleterequest/deleterequest.component';
 import { UpdaterequestComponent } from './activity/updaterequest/updaterequest.component';
 import { AddrequestComponent } from './activity/addrequest/addrequest.component';
+import { UpdateeventComponent } from './activity/updateevent/updateevent.component';
+import { DeleteeventComponent } from './activity/deleteevent/deleteevent.component';
+import { AddeventComponent } from './activity/addevent/addevent.component';
 
 
 @NgModule({
@@ -46,6 +49,9 @@ import { AddrequestComponent } from './activity/addrequest/addrequest.component'
     DeleterequestComponent,
     UpdaterequestComponent,
     AddrequestComponent,
+    UpdateeventComponent,
+    DeleteeventComponent,
+    AddeventComponent,
   ],
   imports: [
     BrowserModule,

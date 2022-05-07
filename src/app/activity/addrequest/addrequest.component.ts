@@ -19,14 +19,6 @@ export class AddrequestComponent implements OnInit {
     { }
 
   ngOnInit(): void {
-
-    console.log(this.data.request.id);
-    this.requestService.getRequestsByUserId(this.loggedInUser)
-    .subscribe((data)=>{
-      this.request = <RequestModel>this.data;
-      console.log(this.data);
-    });
-
   }
 
   addRequest(){
