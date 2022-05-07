@@ -9,113 +9,70 @@
               <img src="assets/logo.png" class="logo">
             </div>
 
-            <mat-form-field class="input-full-width">
-                <!-- [(ngModel)]="userData.firstName" #firstName="ngModel"    -->
-                <input matInput 
-                    required
-                    type="text"
-                    
-                    name="firstName" 
-                    [(ngModel)]="userData.firstName" 
-                    #firstName="ngModel"
-                    
-                    placeholder="First Name" 
-                />
-            </mat-form-field>
+            <!-- [(ngModel)]="userData.firstName" #firstName="ngModel"    -->
+            <input matInput 
+                required
+                type="text"
+                
+                name="firstName" 
+                
+                placeholder="First Name" 
+                class="form-control" 
+                required 
+            />
 
-            <!-- <mat-form-field class="input-full-width"> -->
-                <!-- [(ngModel)]="userData.lastName" 
-                name="lastName" 
-
-                #lastName="ngModel" 
-
-                -->
+            <!-- [(ngModel)]="userData.lastName" #lastName="ngModel"  -->
             <input required matInput 
                 type="text" 
+
+                name="lastName" 
                 
                 placeholder="Last Name"  
-            
-                 ng-pattern-restrict /> <!--pattern="[a-zA-Z]+"-->
-                <div class="alert alert-danger"> <!--*ngIf="lastName.invalid && (userData.submitted || lastName.touched)" -->
-                    <!-- <div *ngIf="lastName.errors.required"> Last Name is required. </div> -->
-                    <!-- <div *ngIf="lastName.errors.pattern"> Can only contain Alphabets</div> -->
-                    </div>
-            <!-- </mat-form-field> -->
+                class="form-control" 
+                required 
+            /> 
 
-            <!-- <mat-form-field class="input-full-width"> -->
-                <!--[(ngModel)]="userData.email" 
-                    name="email" 
+            <!--[(ngModel)]="userData.email" #email="ngModel" -->
+            <input required matInput 
+                type="text" 
 
-                    #email="ngModel" 
-
-                -->
-                <input required matInput 
-                    type="text" 
-                    
-                    placeholder="Email"  
-                   
-
-                    > <!--pattern="^\w+([\.-]?\w+)*@([gmail|yahoo|hotmail]+)*\.([com]+)+$"-->
-                    <div class="alert alert-danger"> <!--[hidden]="email.valid || email.untouched"-->
-                        <!-- <div *ngIf="email.errors && email.errors.required"> Email is required </div> -->
-                        <!-- <div *ngIf="email.errors && email.errors.pattern"> Email is invalid </div> -->
-                    </div>
+                name="email"
                 
-        <!-- </mat-form-field> -->
+                placeholder="Email" 
+                class="form-control" 
+                required  
+            /> 
+                
 
-        <!-- <mat-form-field class="form-group input-full-width">  -->
-            <!--  [(ngModel)]="userData.password" 
-                name="password" 
-
-                #password="ngModel"  
-
-            -->
-
-
+            <!--  [(ngModel)]="userData.password" #password="ngModel" -->
             <input matInput 
                 type="password" 
-               
+
+                name="password" 
+                
                 placeholder="Password" 
                 class="form-control" 
                 required
-                
-                 /> <!--pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"-->
-            <div class="alert alert-danger"> <!--*ngIf="password.invalid && (userData.submitted || password.touched)"-->
-            <!-- <div *ngIf="password.errors.required"> Password is required. </div> -->
-            <!-- <div> Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters.</div> *ngIf="password.errors.pattern" -->
-            </div>
-        <!-- </mat-form-field> -->
+            /> 
     
-        <!-- <mat-form-field class="form-group input-full-width"> -->
 
-            <!-- [(ngModel)]="userData.confirmpassword" 
-                name="confirmpassword" 
-
-                #confirmpassword="ngModel" 
-
-            -->
-
+            <!-- [(ngModel)]="userData.confirmpassword" #confirmpassword="ngModel"  -->
             <input matInput 
                 type="password" 
+
+                name="confirmpassword" 
                
                 placeholder="Confirm Password" 
                 class="form-control" 
                 required 
-                
-                 /> <!--pattern="{{ password.value }}"-->
-            <div class="alert alert-danger"> <!--*ngIf=" confirmpassword.invalid && (userData.submitted || confirmpassword.touched)" -->
-            <!-- <div *ngIf="confirmpassword.errors.required"> Confirm password is required. </div> -->
-            <!-- <div *ngIf="confirmpassword.errors.pattern"> Password & Confirm Password does not match.</div>  -->
-            </div>
-        <!-- </mat-form-field>  -->
-
-             
+            /> 
   
             <div class="form-group">
-                <!--[disabled]="!userData.valid"-->
+                
                 <button 
                     mdbBtn 
                     type="submit"  
+                    [disabled]="!userData.valid"
                     rounded="true" 
                     id="submitButton" 
                     

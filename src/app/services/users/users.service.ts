@@ -13,7 +13,7 @@ export class UsersService {
     this.LocalStorageValue()
   }
 
-  LocalStorageValue() {
+  LocalStorageValue() { 
     if(localStorage.getItem("userToken") != "null"){
       this.httpOptions.headers = this.httpOptions.headers.set('Authorization',  localStorage.getItem("userToken") || '{}');
     };
