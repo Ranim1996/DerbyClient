@@ -9,7 +9,7 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 })
 export class DeleterequestComponent implements OnInit {
 
-  loogedInUser = "123Test";
+  loggedInUser = "123Test";
 
   constructor(
     private requestService: RequestsService,
@@ -21,10 +21,10 @@ export class DeleterequestComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  //delete user
+  //delete request
   deleteRequest(){
-    this.requestService.deleteRequest(this.data.request.id, this.loogedInUser).subscribe();
-    console.log( "Request" + this.data.request.id + "User" + this.loogedInUser);
+    this.requestService.deleteRequest(this.data.request.id, this.loggedInUser).subscribe();
+    console.log( "Request" + this.data.request.id + "User" + this.loggedInUser);
 
     // Close dialog
     this.dialogRef.close();
