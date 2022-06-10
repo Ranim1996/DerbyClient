@@ -44,13 +44,14 @@ export class LoginComponent implements OnInit {
 
   OnSubmit(email: any, password: any){
 
-    this.userService.login(email, password)
+    var credintials = {email: email, password: password};
+    this.userService.login(credintials) 
     .subscribe(
       (res: any) => {
         console.log(res);
         localStorage.setItem('userToken', res);
         location.reload();
-        this.router.navigate(['Derby/users']);
+        this.router.navigate(['Derby/activity']);
       },
       
       (error: Response) => {
