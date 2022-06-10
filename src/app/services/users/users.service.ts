@@ -26,14 +26,13 @@ export class UsersService {
   };
 
 
-  token: string | undefined;
+  token: string;
 
-  login(email: any, password: any){
-
-    const body = email+":"+password;
+  login(credintials: Object){ 
+    var body = JSON.stringify(credintials);
  
     console.log("LOGIN: " + body);
-    return this.httpClient.post('https://localhost:44398/api/Account/Login', body, {responseType: 'text'});
+    return this.httpClient.post('https://localhost:44398/api/Account/Login', body, {headers: this.httpOptions.headers, responseType: 'json'});
   }
  
   logout(){
@@ -41,7 +40,8 @@ export class UsersService {
   }
 
   public register(data: any){
-    return this.httpClient.post('https://localhost:44398/api/Account/register', data).toPromise().then(data => {
+    var body = JSON.stringify(data);
+    return this.httpClient.post('https://localhost:44398/api/Account/register', body, {headers: this.httpOptions.headers, responseType: 'json'}).toPromise().then(data => {
       console.log("Service:" + data);
     }); 
   }

@@ -2,9 +2,8 @@
     <div>
       <div class="card">
         <div class="card-body">
-          <form #userData="ngForm" 
-          class="text-center" 
-          (ngSubmit)="onSubmitRegistration(userData.value)">
+          <form class="text-center" 
+          (ngSubmit)="onSubmitRegistration(user)">
             <div class="imgcontainer">
               <img src="assets/logo.png" class="logo">
             </div>
@@ -13,9 +12,8 @@
             <input matInput 
                 required
                 type="text"
-                
+                [(ngModel)]="user.firstName" 
                 name="firstName" 
-                
                 placeholder="First Name" 
                 class="form-control" 
                 required 
@@ -24,9 +22,8 @@
             <!-- [(ngModel)]="userData.lastName" #lastName="ngModel"  -->
             <input required matInput 
                 type="text" 
-
+                [(ngModel)]="user.lastName"
                 name="lastName" 
-                
                 placeholder="Last Name"  
                 class="form-control" 
                 required 
@@ -35,9 +32,8 @@
             <!--[(ngModel)]="userData.email" #email="ngModel" -->
             <input required matInput 
                 type="text" 
-
+                [(ngModel)]="user.emailAddress"
                 name="email"
-                
                 placeholder="Email" 
                 class="form-control" 
                 required  
@@ -47,9 +43,8 @@
             <!--  [(ngModel)]="userData.password" #password="ngModel" -->
             <input matInput 
                 type="password" 
-
+                [(ngModel)]="user.password" 
                 name="password" 
-                
                 placeholder="Password" 
                 class="form-control" 
                 required
@@ -57,22 +52,20 @@
     
 
             <!-- [(ngModel)]="userData.confirmpassword" #confirmpassword="ngModel"  -->
-            <input matInput 
+            <!-- <input matInput 
                 type="password" 
-
+                [(ngModel)]="user.confirmpassword" 
                 name="confirmpassword" 
-               
                 placeholder="Confirm Password" 
                 class="form-control" 
                 required 
-            /> 
+            />  -->
   
             <div class="form-group">
-                
+<!--                     [disabled]="!user.valid" -->
                 <button 
                     mdbBtn 
                     type="submit"  
-                    [disabled]="!userData.valid"
                     rounded="true" 
                     id="submitButton" 
                     

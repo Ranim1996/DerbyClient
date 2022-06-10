@@ -2,6 +2,7 @@ import { UsersService } from './../services/users/users.service';
 import { UserModel } from './../classes/UserModel';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-signup',
@@ -11,7 +12,7 @@ import { Router } from '@angular/router';
 export class SignupComponent implements OnInit {
 
   userToAdd:{} | undefined;
-  user: UserModel | undefined;
+  user: UserModel = new UserModel("", "", "", "", new Date());
 
   constructor(
     private router: Router,
@@ -31,7 +32,7 @@ export class SignupComponent implements OnInit {
 
     console.log("On register button");
 
-    this.userToAdd = {
+    this.userToAdd = { 
       "firstName": user.firstName,
       "lastName": user.lastName,
       "password": user.password, 
