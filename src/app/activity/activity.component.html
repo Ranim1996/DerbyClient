@@ -5,7 +5,19 @@
         <mat-tab-group>
 
         <mat-tab label="Event"> 
-            <tr *ngFor="let event of events">
+            <tr *ngFor="let event of events"> 
+
+                <mat-card-actions>
+    
+                    <div class="actions">
+            
+                        <button mat-mini-fab aria-label="Example icon button with an add icon" (click)="openDialogAddEvent(event)"> <mat-icon matTooltip="Add event"> add </mat-icon> </button>
+                
+                    </div>
+    
+                </mat-card-actions>
+    
+                <mat-divider></mat-divider>
 
                 <mat-card-content> 
     
