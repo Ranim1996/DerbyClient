@@ -8,8 +8,7 @@
               <img src="assets/logo.png" class="logo">
             </div>
 
-            <!-- [(ngModel)]="userData.firstName" #firstName="ngModel"    -->
-            <input matInput 
+            <input matInput  
                 required
                 type="text"
                 [(ngModel)]="user.firstName" 
@@ -19,7 +18,6 @@
                 required 
             />
 
-            <!-- [(ngModel)]="userData.lastName" #lastName="ngModel"  -->
             <input required matInput 
                 type="text" 
                 [(ngModel)]="user.lastName"
@@ -29,7 +27,6 @@
                 required 
             /> 
 
-            <!--[(ngModel)]="userData.email" #email="ngModel" -->
             <input required matInput 
                 type="text" 
                 [(ngModel)]="user.emailAddress"
@@ -39,8 +36,6 @@
                 required  
             /> 
                 
-
-            <!--  [(ngModel)]="userData.password" #password="ngModel" -->
             <input matInput 
                 type="password" 
                 [(ngModel)]="user.password" 
@@ -48,21 +43,9 @@
                 placeholder="Password" 
                 class="form-control" 
                 required
-            /> 
-    
-
-            <!-- [(ngModel)]="userData.confirmpassword" #confirmpassword="ngModel"  -->
-            <!-- <input matInput 
-                type="password" 
-                [(ngModel)]="user.confirmpassword" 
-                name="confirmpassword" 
-                placeholder="Confirm Password" 
-                class="form-control" 
-                required 
-            />  -->
+            />
   
             <div class="form-group">
-<!--                     [disabled]="!user.valid" -->
                 <button 
                     mdbBtn 
                     type="submit"  

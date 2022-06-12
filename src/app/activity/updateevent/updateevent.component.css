@@ -5,7 +5,7 @@
 .btn{
     background-color: rgb(84, 104, 138);
     color: white; 
-}
+} 
 
 /* screens less than 1130 */
 @media screen and (max-width: 1130px) {

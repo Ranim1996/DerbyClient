@@ -20,7 +20,7 @@ const routes: Routes = [
     component: UsersComponent 
   },
   { 
-    path: 'Derby/activity', 
+    path: 'Derby/activity',  
     component: ActivityComponent 
   }
 ];

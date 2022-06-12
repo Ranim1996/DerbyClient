@@ -1,5 +1,5 @@
 import { EventsService } from './../../services/Activity/Event/events.service';
-import { EventModel } from './../../classes/EventModel';
+import { EventModel } from 'src/app/classes/EventModel';
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
@@ -20,23 +20,22 @@ export class UpdateeventComponent implements OnInit {
 
   ngOnInit(): void {
 
-    console.log(this.data.request.id);
-    this.id = this.data.request.id;
+    console.log(this.data.event.id);
+    this.id = this.data.event.id;
     this.eventService.getEventById(this.id)
     .subscribe((data)=>{
       this.event = <EventModel>this.data;
       console.log(this.data);
     });
+
   }
 
   updateEvent(){
-
-    this.eventService.updateEvent(this.data.request).subscribe(
+    this.eventService.updateEvent(this.data.event).subscribe(
       (res: any) => {
-        console.log(this.data.request.id + "updated");
+        console.log(this.data.event.id + "updated");
       });
-      this.dialogRef.close();
+      this.dialogRef.close(); 
     }
-
 
 }

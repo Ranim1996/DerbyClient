@@ -32,8 +32,8 @@ export class EventsService {
   }
 
   public updateEvent(event: EventModel) {
-    const url = 'https://localhost:44324/api/Event/updateevent';
-    return this.httpClient.put(url, event, this.httpOptions);
+    const url = 'https://localhost:44324/api/Event/updateevent'; 
+    return this.httpClient.put(url, event, this.httpOptions); 
   }
 
   public addEvent(event: EventModel) {

@@ -2,7 +2,7 @@
 
     <mat-card-content class="popup"> 
 
-        <form class="text-center border-silver" (ngSubmit)="updateEvent()" #EventForm="ngForm">
+        <form class="text-center border-silver" (ngSubmit)="updateEvent()" #RequestForm="ngForm">
             
         <div class="col-md-12"><label class="labels">Title:</label>
             <br>
@@ -15,7 +15,7 @@
         </div>
               <br>
 
-        <div class="col-md-12"><label class="labels">Description:</label>
+        <div class="col-md-12"><label class="labels">Description:</label> 
             <br>
           <mat-form-field class="input-full-width">
                     <input type="text" class="form-control" id="description"
@@ -25,26 +25,26 @@
           </mat-form-field>
         </div>
             <br>
+        
+            <div class="col-md-12"><label class="labels">Where:</label> 
+                <br>
+              <mat-form-field class="input-full-width">
+                        <input type="text" class="form-control" id="where"
+                        required
+                        [(ngModel)]="this.data.event.where" name="where"
+                        #where="ngModel">          
+              </mat-form-field>
+            </div>
+                <br>
 
-        <div class="col-md-12"><label class="labels">When:</label>
+        <div class="col-md-12"><label class="labels">When:</label> 
             <br>
-            <mat-form-field class="input-full-width">
+          <mat-form-field class="input-full-width">
                     <input type="text" class="form-control" id="when"
                     required
                     [(ngModel)]="this.data.event.when" name="when"
                     #when="ngModel">          
-            </mat-form-field>
-        </div>
-            <br>
-
-        <div class="col-md-12"><label class="labels">Where:</label>
-            <br>
-            <mat-form-field class="input-full-width">
-                    <input type="text" class="form-control" id="where"
-                    required
-                    [(ngModel)]="this.data.event.where" name="where"
-                    #where="ngModel">          
-            </mat-form-field>
+          </mat-form-field>
         </div>
             <br>
     

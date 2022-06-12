@@ -31,12 +31,12 @@ export class UpdaterequestComponent implements OnInit {
   }
 
   updateRequest(){
-
+ 
     this.requestService.updateRequest(this.data.request).subscribe(
       (res: any) => {
         console.log(this.data.request.id + "updated");
       });
-      this.dialogRef.close();
+      this.dialogRef.close(); 
     }
 
 }

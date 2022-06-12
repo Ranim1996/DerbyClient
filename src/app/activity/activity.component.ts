@@ -1,6 +1,6 @@
+import { UpdateeventComponent } from './updateevent/updateevent.component';
 import { AddeventComponent } from './addevent/addevent.component';
 import { DeleteeventComponent } from './deleteevent/deleteevent.component';
-import { UpdateeventComponent } from './updateevent/updateevent.component';
 import { RequestsService } from './../services/Activity/Request/requests.service';
 import { RequestModel } from './../classes/RequestModel';
 import { Component, OnInit } from '@angular/core';

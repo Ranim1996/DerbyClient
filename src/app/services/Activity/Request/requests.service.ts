@@ -32,8 +32,8 @@ export class RequestsService {
   }
 
   public updateRequest(request: RequestModel) {
-    const url = 'https://localhost:44324/api/Request/updaterequest';
-    return this.httpClient.put(url, request, this.httpOptions);
+    const url = 'https://localhost:44324/api/Request/updaterequest'; 
+    return this.httpClient.put(url, request, this.httpOptions); 
   }
 
   public addRequest(request: RequestModel) {
