@@ -3,8 +3,12 @@
 }
 
 .btn{
-    background-color: rgb(84, 104, 138);
-    color: white; 
+    background-color: #46aacc;
+    color: white;
+    padding: 14px 20px;
+    margin: 6px 0;
+    border: none;
+    cursor: pointer;
 }
 
 /* screens less than 1130 */

@@ -16,6 +16,8 @@
             </mat-card-actions>
 
             <mat-divider></mat-divider>
+            <br>
+            
             <tr *ngFor="let event of events"> 
 
                 <mat-card-content> 
@@ -56,6 +58,20 @@
 
 
         <mat-tab label="Request">
+
+            <mat-card-actions>
+    
+                <div class="actions">
+        
+                    <button mat-mini-fab aria-label="Example icon button with an add icon" (click)="openDialogAddRequest(request)"> <mat-icon matTooltip="Add request"> add </mat-icon> </button>
+            
+                </div>
+
+            </mat-card-actions>
+
+            <mat-divider></mat-divider>
+
+            <br>
 
             <tr *ngFor="let request of requests">
 

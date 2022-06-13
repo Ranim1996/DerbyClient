@@ -9,7 +9,7 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
   styleUrls: ['./addevent.component.css']
 })
 export class AddeventComponent implements OnInit {
-
+ 
   eventToAdd:{} | undefined;
   event: EventModel = new EventModel("123Test", "", "", new Date(), "");
 
