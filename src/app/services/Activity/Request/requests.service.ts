@@ -36,9 +36,11 @@ export class RequestsService {
     return this.httpClient.put(url, request, this.httpOptions); 
   }
 
-  public addRequest(request: RequestModel) {
-    const url = 'https://localhost:44324/api/Request/addrequest'; 
-    return this.httpClient.put(url, request, this.httpOptions);
+  public addRequest(request: any) { 
+    var body = JSON.stringify(request);
+    return this.httpClient.post('https://localhost:44324/api/Request/addrequest', body, this.httpOptions).toPromise().then(data => {
+      console.log("Add Request:" + data);
+    }); 
   }
 
 }

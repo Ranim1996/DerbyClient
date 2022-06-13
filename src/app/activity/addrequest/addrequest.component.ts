@@ -10,8 +10,8 @@ import { RequestsService } from 'src/app/services/Activity/Request/requests.serv
 })
 export class AddrequestComponent implements OnInit {
 
-  request: RequestModel | undefined;
-  loggedInUser = "123Test";
+  requestToAdd:{} | undefined;
+  request: RequestModel = new RequestModel("123Test", "", "");
 
   constructor(private requestService: RequestsService,  
     public dialogRef: MatDialogRef<AddrequestComponent>,
@@ -21,12 +21,18 @@ export class AddrequestComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addRequest(){
+  onSubmit(request: any){ 
 
-    this.requestService.addRequest(this.data.request).subscribe(
-      (res: any) => {
-        console.log(this.data.request.id + "added");
-      });
+    this.requestToAdd = { 
+      "userId": "123Test",
+      "title": request.title,
+      "description": request.description,
+  } 
+
+      this.requestService.addRequest(<JSON>this.requestToAdd);
+      console.log("Added" + this.requestToAdd);
+
       this.dialogRef.close();
-    }
+  }
+
 }
