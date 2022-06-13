@@ -39,7 +39,7 @@ export class UsersService {
      this.httpOptions.headers = this.httpOptions.headers.delete('Authorization');
   }
 
-  public register(data: any){
+  public register(data: any){ 
     var body = JSON.stringify(data);
     return this.httpClient.post('https://localhost:44398/api/Account/register', body, {headers: this.httpOptions.headers, responseType: 'json'}).toPromise().then(data => {
       console.log("Service:" + data);

@@ -10,8 +10,8 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 })
 export class AddeventComponent implements OnInit {
 
-  event: EventModel | undefined;
-  loggedInUser = "123Test";
+  eventToAdd:{} | undefined;
+  event: EventModel = new EventModel("123Test", "", "", new Date(), "");
 
   constructor(private eventService: EventsService,  
     public dialogRef: MatDialogRef<AddeventComponent>,
@@ -21,13 +21,20 @@ export class AddeventComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addEvent(){
+  onSubmit(event: any){ 
 
-    this.eventService.addEvent(this.data.event).subscribe(
-      (res: any) => {
-        console.log(this.data.event.id + "added");
-      });
+    this.eventToAdd = { 
+      "userId": "123Test",
+      "title": event.title,
+      "description": event.description,
+      "when": event.when, 
+      "where": event.where
+  } 
+
+      this.eventService.addEvent(<JSON>this.eventToAdd);
+      console.log("Added" + this.eventToAdd);
+
       this.dialogRef.close();
-    }
+  }
 
 }

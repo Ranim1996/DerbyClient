@@ -24,6 +24,9 @@ export class ActivityComponent implements OnInit {
 
   loggedInUser = "123Test";
 
+  event: EventModel = new EventModel(this.loggedInUser, "", "", new Date(), "");
+
+
   constructor(private requestService: RequestsService,
     private eventService: EventsService,
     public dialog: MatDialog) { } 

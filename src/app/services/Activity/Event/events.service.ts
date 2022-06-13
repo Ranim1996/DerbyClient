@@ -36,8 +36,10 @@ export class EventsService {
     return this.httpClient.put(url, event, this.httpOptions); 
   }
 
-  public addEvent(event: EventModel) {
-    const url = 'https://localhost:44324/api/Event/addevent'; 
-    return this.httpClient.put(url, event, this.httpOptions);
+  public addEvent(event: any) { 
+    var body = JSON.stringify(event);
+    return this.httpClient.post('https://localhost:44324/api/Event/addevent', body, this.httpOptions).toPromise().then(data => {
+      console.log("Add Event:" + data);
+    }); ; 
   }
 }

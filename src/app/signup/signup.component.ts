@@ -28,9 +28,7 @@ export class SignupComponent implements OnInit {
     }
   }
 
-  onSubmitRegistration(user: any){
-
-    console.log("On register button");
+  onSubmitRegistration(user: any){ 
 
     this.userToAdd = { 
       "firstName": user.firstName,
