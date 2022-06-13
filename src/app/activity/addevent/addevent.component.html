@@ -1,59 +1,58 @@
-<mat-card class="example-card">
+<div class="container">
+    <div>
+      <div class="card">
+        <div class="card-body">
+          <form class="text-center" 
+          (ngSubmit)="onSubmit(event)">
 
-    <mat-card-content class="popup"> 
-
-        <form class="text-center border-silver" (ngSubmit)="addEvent()" #EventForm="ngForm">
-            
-        <div class="col-md-12"><label class="labels">Title:</label>
-            <br>
-          <mat-form-field class="input-full-width">
-                <input type="text" class="form-control" id="title"
+            <input matInput  
+                type="text"
+                [(ngModel)]="event.title" 
+                name="title" 
+                placeholder="Title" 
+                class="form-control" 
                 required 
-                [(ngModel)]="this.data.event.title" name="title"
-                #title="ngModel">
-          </mat-form-field>
-        </div>
-              <br>
+            />
 
-        <div class="col-md-12"><label class="labels">Description:</label>
-            <br>
-          <mat-form-field class="input-full-width">
-                    <input type="text" class="form-control" id="description"
-                    required
-                    [(ngModel)]="this.data.event.description" name="description"
-                    #description="ngModel">          
-          </mat-form-field>
-        </div>
-            <br>
-
-        <div class="col-md-12"><label class="labels">When:</label>
-            <br>
-            <mat-form-field class="input-full-width">
-                    <input type="text" class="form-control" id="when"
-                    required
-                    [(ngModel)]="this.data.event.when" name="when"
-                    #when="ngModel">          
-            </mat-form-field>
-        </div>
-            <br>
-
-        <div class="col-md-12"><label class="labels">Where:</label>
-            <br>
-            <mat-form-field class="input-full-width">
-                    <input type="text" class="form-control" id="where"
-                    required
-                    [(ngModel)]="this.data.event.where" name="where"
-                    #where="ngModel">          
-            </mat-form-field>
-        </div>
-            <br>
-    
-        <button class="btn" type="submit" id="submitButton" ria-label="">Save</button>    
-            <br>
+            <input matInput 
+                type="text" 
+                [(ngModel)]="event.description"
+                name="description" 
+                placeholder="Description"  
+                class="form-control" 
+                required 
+            />
+                
+            <input matInput 
+                type="text" 
+                [(ngModel)]="event.when" 
+                name="when" 
+                placeholder="When" 
+                class="form-control" 
+                required
+            />
   
-        </form>
-      
-    </mat-card-content>
-    
-</mat-card>
-  
+            <input matInput 
+            type="text" 
+            [(ngModel)]="event.where"
+            name="where"
+            placeholder="Where" 
+            class="form-control" 
+            required  
+            /> 
+
+            <div class="form-group">
+                <button 
+                    mdbBtn 
+                    type="submit"  
+                    rounded="true" 
+                    id="submitButton" 
+                    
+                    class="btn btn-info"> Create Event
+                </button> 
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>

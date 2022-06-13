@@ -1,17 +1,49 @@
-.example-card {
-    background: rgb(228, 231, 236);;
+body {font-family: Arial, Helvetica, sans-serif;}
+form {border: 3px solid #f1f1f1;}
+
+input[type=text], input[type=password] {
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
 }
 
-.btn{
-    background-color: rgb(84, 104, 138);
-    color: white; 
+button {
+  background-color: #46aacc;
+  color: white;
+  padding: 14px 20px;
+  margin: 6px 0;
+  border: none;
+  cursor: pointer;
 }
 
-/* screens less than 1130 */
-@media screen and (max-width: 1130px) {
-    /* stack button on top of each other */
-    .mat-dialog-actions .mat-raised-button {
-        min-width: 90%;
-        margin: 5%;
-    }
+button:hover {
+  opacity: 0.8;
+}
+
+.container {
+  padding: 16px;
+  background: rgb(228, 231, 236);
+}
+
+.card{
+  margin-top: 5%;
+  width: 200px;
+  height: 400px;
+  margin-left:auto;
+  margin-right:auto;  
+  text-align: center;
+  vertical-align:middle;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
 }
